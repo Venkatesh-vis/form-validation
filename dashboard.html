@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h1 id="user"></h1>
+    <script>
+        let userData = localStorage.getItem("users")
+
+        let userArray = JSON.parse(userData)
+
+        let name = userArray.find(user=>user.username)
+
+        let me = document.getElementById("user")
+        me.innerHTML= `welcome ${name.username}`
+        document.body.appendChild(me)
+
+
+        
+    </script>
+</body>
+
+</html>
